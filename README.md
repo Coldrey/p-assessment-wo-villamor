@@ -22,7 +22,7 @@ Lou Geh car dealership sells both new and used cars, and it operates a service f
    2. DFD
 4. Provide a ```README.md``` containing the setup guide.
 5. The application should be published in Github via forked repository and for final version of your prototype will create a ```Pull request``` in Github 
-6. You will send the Github link to us thru our email devops@biotechfarms.com on or before **14-10-203** 12:00 PM
+6. You will send the Github link to us thru our email devops@biotechfarms.com on or before **28-07-2024** 12:00 PM
 
 
     ### **Directory structure**
