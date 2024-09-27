@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Lou Geh Dealership</h1>
+        <nav>
+          <a href="#profile1">ADD CUSTOMER</a>
+          <a href="#profile2">ADD SALE</a>
+          <a href="#profile3">ADD CAR</a>
+          <a href="#profile4">ADD SERVICE RECORD</a>
+          <a href="#profile5">ADD SALES PERSON</a>
+          <a href="#profile6">CREATE INVOICE</a>
+        </nav>
+      </header>
+
+    <main>
+    <article id="profile1" class="card">
+        <figure>
+             <figcaption>ADD CUSTOMER</figcaption>
+        </figure>
+        <form action="controllers/UserController.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"><br><br>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br><br>
+            
+            <input type="submit" value="Add Customer">
+        </form>
+    </article>
+
+    <article id="profile3" class="card">
+            <figure>
+                <figcaption>ADD CAR</figcaption>
+            </figure>
+        <form action="controllers/CarsController.php" method="post">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make" required><br><br>
+            
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required><br><br>
+            
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required><br><br>
+            
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" id="price" name="price" required><br><br>
+            
+            <label for="serial_number">Serial Number:</label>
+            <input type="text" id="serial_number" name="serial_number" required><br><br>
+        
+            <input type="submit" value="Add Car">
+        </form>
+    </article>
+    
+    <article id="profile2" class="card">
+        <figure>
+            <figcaption>ADD SALES</figcaption>
+       </figure>
+        <form action="controllers/SaleController.php" method="POST">
+            <label for="customer_id">Customer ID:</label>
+            <input type="number" id="customer_id" name="customer_id" required><br><br>
+
+            <label for="car_id">Car ID:</label>
+            <input type="number" id="car_id" name="car_id" required><br><br>
+
+            <label for="salesperson_id">Salesperson ID:</label>
+            <input type="number" id="salesperson_id" name="salesperson_id" required><br><br>
+
+            <label for="sale_date">Sale Date:</label>
+            <input type="date" id="sale_date" name="sale_date" required><br><br>
+
+            <label for="total_amount">Total Amount:</label>
+            <input type="number" step="0.01" id="total_amount" name="total_amount" required><br><br>
+
+            <input type="submit" value="Add Sale">
+        </form>
+    </article>
+
+    <article id="profile4" class="card">
+        <figure>
+            <figcaption>ADD SERVICE RECORD</figcaption>
+       </figure>
+        <form action="controllers/ServiceController.php" method="POST">
+            <label for="customer_id">Customer ID:</label>
+            <input type="number" id="customer_id" name="customer_id" required><br><br>
+
+            <label for="car_id">Car ID:</label>
+            <input type="number" id="car_id" name="car_id" required><br><br>
+
+            <label for="mechanic_name">Mechanic Name:</label>
+            <input type="text" id="mechanic_name" name="mechanic_name" required><br><br>
+
+            <label for="service_date">Service Date:</label>
+            <input type="date" id="service_date" name="service_date" required><br><br>
+
+            <label for="service_description">Service Description:</label>
+            <textarea id="service_description" name="service_description" required></textarea><br><br>
+
+            <label for="parts_used">Parts Used:</label>
+            <textarea id="parts_used" name="parts_used"></textarea><br><br>
+
+            <label for="total_cost">Total Cost:</label>
+            <input type="number" step="0.01" id="total_cost" name="total_cost" required><br><br>
+
+            <input type="submit" value="Add Service Record">
+        </form>
+    </article>
+
+    <article id="profile5" class="card">
+        <figure>
+            <figcaption>ADD SALES PERSON </figcaption>
+       </figure>
+        <form action="controllers/SalespersonController.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"><br><br>
+
+            <button type="submit">Add Salesperson</button>
+        </form>
+    </article>
+
+    <article id="profile6" class="card">
+        <figure>
+            <figcaption>CREATE INVOICE </figcaption>
+       </figure>
+       <form action="controllers/invoiceController.php" method="POST">
+            <label for="sale_id">Sale ID:</label>
+            <input type="number" id="sale_id" name="sale_id" required><br><br>
+
+            <label for="invoice_date">Invoice Date:</label>
+            <input type="date" id="invoice_date" name="invoice_date" required><br><br>
+
+            <label for="total_amount">Total Amount:</label>
+            <input type="number" id="total_amount" name="total_amount" step="0.01" required><br><br>
+
+            <button type="submit">Create Invoice</button>
+        </form>
+    </article>
+
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
